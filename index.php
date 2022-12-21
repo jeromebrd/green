@@ -25,7 +25,7 @@
                         <p>Votre site de CBD en ligne</p>
 
 
-                        <a href="#" class="btn">
+                        <a href="./produits.php" class="btn">
                             <span>
                                 Voir les produits
                                 <svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -2413,7 +2413,7 @@
             </div>
 
 
-            <div class="view_all__wrap">
+            <div class="view_all__wrap" style="width: 100%">
                 <a href="#" class="btn svg_btn">Voir plus<svg width="14" height="12" viewBox="0 0 14 12" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0.777344 6.77789V5.22233H10.1107L6.99957 2.11122L7.77734 0.555664L13.2218 6.00011L7.77734 11.4446L6.99957 9.889L10.1107 6.77789H0.777344Z" fill="white" />
                     </svg></a>

@@ -12,7 +12,7 @@
                         <ul class="list_links">
 
                             <li>
-                                <a href="/account">Page personnel</a>
+                                <a href="/account">Page personnelle</a>
                             </li>
 
                             <li>
@@ -71,9 +71,9 @@
                             <li>
 
                                 <div class="contact_address">
-                                    <p>Livraison 3 jorus max</p>
+                                    <p>Livraison 3 jours max</p>
                                     <p>Retour gratuit 14 jours</p>
-                                    <p>Paiement sécrisé</p>
+                                    <p>Paiement sécurisé</p>
                                 </div>
 
                             </li>
@@ -92,7 +92,7 @@
                 <div class="col-sm-3 footer_block">
 
                     <div class="footer_item footer_item__links">
-                        <h6 class="linklist_menu_title">Notre compagnies</h6>
+                        <h6 class="linklist_menu_title">Notre compagnie</h6>
 
                         <ul class="list_links">
 
@@ -113,7 +113,7 @@
                             </li>
 
                             <li>
-                                <a href="/policies/terms-of-service">Termes et condition</a>
+                                <a href="/policies/terms-of-service">Termes et conditions</a>
                             </li>
 
                         </ul>

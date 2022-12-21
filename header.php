@@ -216,7 +216,7 @@
                                         </li>
 
                                         <li class="level_1__item level_2__small" style="display: inline-block;">
-                                            <a class="level_1__link " href="#">Nos produits
+                                            <a class="level_1__link " href="./produits.php">Nos produits
                                                 <i class="level_1__trigger megamenu_trigger" data-submenu="menu_1568649904694"></i>
 
                                             </a>
@@ -317,7 +317,7 @@
                                         </li>
 
                                         <li class="level_1__item " style="display: inline-block;">
-                                            <a class="level_1__link " href="#">Contact
+                                            <a class="level_1__link " href="./contact.php">Contact
 
 
                                             </a>
@@ -330,7 +330,7 @@
 
 
                                             <div class="menu_header_wishlist">
-                                                <a href="#">
+                                                <a href="./favoris.php">
                                                     <span class="menu_header_wishlist_text">Favoris</span>
                                                     <span class="zemez_wishlist_total"></span>
                                                 </a>

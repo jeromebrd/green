@@ -167,7 +167,7 @@
                                     </p>
 
 
-                                    <p class="product_desc">Health is one of the most important things in our life. We think that it is a real luck to have a strong health. Our way of life doesn’t increase the physiological condition of our body.
+                                    <p class="product_desc_detail">Health is one of the most important things in our life. We think that it is a real luck to have a strong health. Our way of life doesn’t increase the physiological condition of our body.
                                         Alcohol, ...</p>
 
 
@@ -281,7 +281,7 @@
                                     </p>
 
 
-                                    <p class="product_desc">
+                                    <p class="product_desc_detail">
                                         Health is one of most important things in our life. We think that it is a real luck to have a strong health. Our way of life doesn’t increase the physiological condition of our body. Alcohol, ciga...</p>
 
 
@@ -398,7 +398,7 @@
                                     </p>
 
 
-                                    <p class="product_desc">It is a very noble activity to protect health and help people recover. Our main goal is to find the easiest way of treatment. We understand that human’s activity is also very dangerous because it c...</p>
+                                    <p class="product_desc_detail">It is a very noble activity to protect health and help people recover. Our main goal is to find the easiest way of treatment. We understand that human’s activity is also very dangerous because it c...</p>
 
 
                                     <form method="post" action="/cart/add" class="add_to_cart_form">
@@ -513,7 +513,7 @@
                                     </p>
 
 
-                                    <p class="product_desc">Health is one of the most important things in our life. We think that it is a real luck to have a strong health. Our way of life doesn’t increase the physiological condition of our body.
+                                    <p class="product_desc_detail">Health is one of the most important things in our life. We think that it is a real luck to have a strong health. Our way of life doesn’t increase the physiological condition of our body.
                                         Alcohol, ...</p>
 
 
@@ -630,7 +630,7 @@
                                     </p>
 
 
-                                    <p class="product_desc">
+                                    <p class="product_desc_detail">
                                         Health is one of most important things in our life. We think that it is a real luck to have a strong health. Our way of life doesn’t increase the physiological condition of our body. Alcohol, ciga...</p>
 
 
@@ -741,7 +741,7 @@
                                     </p>
 
 
-                                    <p class="product_desc">It is a very noble activity to protect health and help people recover. Our main goal is to find the easiest way of treatment. We understand that human’s activity is also very dangerous because it c...</p>
+                                    <p class="product_desc_detail">It is a very noble activity to protect health and help people recover. Our main goal is to find the easiest way of treatment. We understand that human’s activity is also very dangerous because it c...</p>
 
 
                                     <form method="post" action="/cart/add" class="add_to_cart_form">
@@ -835,7 +835,7 @@
                     <div class="sidebar">
 
 
-                        <div class="sidebar_widget sidebar_widget__linklist">
+                        <!-- <div class="sidebar_widget sidebar_widget__linklist">
                             <h6 class="widget_header linklist_menu_title">Lorem, ipsum.</h6>
 
                             <div class="widget_content">
@@ -879,7 +879,7 @@
                                     </li>
                                 </ul>
                             </div>
-                        </div>
+                        </div> -->
 
 
 
