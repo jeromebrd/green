@@ -300,7 +300,17 @@
             color: #121212;
             font-size: 12px;
         }
+
+        .footer_main p,
+        .footer_main ul li a {
+            color: white;
+        }
+
+        .footer_item h6 {
+            color: #31862f;
+        }
     </style>
+    <script src="./assets/js/anim_register.js"></script>
     <script>
         let interval = "100000",
             timeout = "3000";
@@ -334,7 +344,7 @@
             owl.owlCarousel({
                 margin: 10,
                 nav: false,
-                loop: false,
+                loop: true,
                 responsive: {
                     0: {
                         items: 2

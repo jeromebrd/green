@@ -76,7 +76,7 @@
                         </a>
                         <ul class="collapse list-unstyled pl-4 w-100" id="dashboard">
                             <li class="nav-item active">
-                                <a class="nav-link pl-3" href="./index.html"><span class="ml-1 item-text">Tableau de bord</span></a>
+                                <a class="nav-link pl-3" href="./index.php"><span class="ml-1 item-text">Tableau de bord</span></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link pl-3" href="#"><span class="ml-1 item-text">Voir mon site</span></a>

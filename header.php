@@ -228,10 +228,33 @@
                                                     <div>
                                                         <ul class="level_3">
 
+                                                            <style>
+                                                                .level_4_item {
+                                                                    display: flex;
+                                                                    flex-direction: column;
+                                                                    align-items: flex-start;
 
+                                                                }
+
+                                                                .level_4 .level_4_item .level_4_link {
+                                                                    color: #6c6e71 !important;
+                                                                }
+
+                                                                .level_4 .level_4_item .level_4_link:hover {
+                                                                    color: #31862f !important;
+                                                                }
+                                                            </style>
 
                                                             <li class="level_3__item ">
                                                                 <a class="level_3__link" href="#">Fleurs CBD</a>
+                                                                <ul class="level_4">
+                                                                    <li class="level_4_item">
+                                                                        <a class="level_4_link" href="">Strambery kush</a>
+                                                                        <a class="level_4_link" href="">Amnesia haze</a>
+                                                                        <a class="level_4_link" href="">Orange bud</a>
+                                                                        <a class="level_4_link" href="">Haze clasic</a>
+                                                                    </li>
+                                                                </ul>
 
 
                                                             </li>
@@ -240,7 +263,15 @@
 
                                                             <li class="level_3__item ">
                                                                 <a class="level_3__link" href="#">Résine CBD</a>
-
+                                                                <ul class="level_4">
+                                                                    <li class="level_4_item">
+                                                                        <a class="level_4_link" href="">Olivette</a>
+                                                                        <a class="level_4_link" href="">Marocain</a>
+                                                                        <a class="level_4_link" href="">Afgan</a>
+                                                                        <a class="level_4_link" href="">Gras</a>
+                                                                        <a class="level_4_link" href="">Jaune</a>
+                                                                    </li>
+                                                                </ul>
 
                                                             </li>
 
@@ -248,7 +279,15 @@
 
                                                             <li class="level_3__item ">
                                                                 <a class="level_3__link" href="#">Huile CBD</a>
-
+                                                                <ul class="level_4">
+                                                                    <li class="level_4_item">
+                                                                        <a class="level_4_link" href="">Huile 0.5%</a>
+                                                                        <a class="level_4_link" href="">Huile 0.15%</a>
+                                                                        <a class="level_4_link" href="">Huile 0.25%</a>
+                                                                        <a class="level_4_link" href="">Huile 0.35%</a>
+                                                                        <a class="level_4_link" href="">Huile 0.45%</a>
+                                                                    </li>
+                                                                </ul>
 
                                                             </li>
 
@@ -258,7 +297,13 @@
 
                                                             <li class="level_3__item ">
                                                                 <a class="level_3__link" href="#">Vap CBD</a>
-
+                                                                <ul class="level_4">
+                                                                    <li class="level_4_item">
+                                                                        <a class="level_4_link" href="">Recharge</a>
+                                                                        <a class="level_4_link" href="">Fluide</a>
+                                                                        <a class="level_4_link" href="">Matériels</a>
+                                                                    </li>
+                                                                </ul>
 
                                                             </li>
 
@@ -270,32 +315,6 @@
 
 
                                         </li>
-
-
-
-
-
-
-                                        <li class="level_1__item level_2__links" style="display: inline-block;">
-                                            <a class="level_1__link " href="./categories.php">Nos catégories
-
-
-                                            </a>
-
-
-
-
-                                        </li>
-
-
-
-
-
-
-
-
-
-
 
                                         <li class="level_1__item " style="display: inline-block;">
                                             <a class="level_1__link " href="#">Contact
@@ -370,8 +389,13 @@
                                 <div class="header_account">
 
 
-                                    <a href="#" title="Account">
+                                    <a href="connexion.php" title="Account">
                                         <span class="link_text">Connexion</span>
+
+                                    </a>
+                                    <!-- Code php pour afficher mon compte lorsqu'on est connecter -->
+                                    <a href="account.php" title="Account">
+                                        <span class="link_text">Mon compte</span>
 
                                     </a>
 
@@ -380,7 +404,7 @@
 
 
                                 <div class="header_wishlist">
-                                    <a href="#" title="Wishlist">
+                                    <a href="favoris.php" title="Wishlist">
                                         <span class="link_text">Favoris</span>
 
                                     </a>
@@ -390,7 +414,7 @@
                                 <div class="header_cart" id="main__cart_item">
                                     <a class="cart_link" href="#">
 
-                                        <span class="link_text">Panier:</span>
+                                        <span class="link_text">Panier</span>
 
                                         <span id="cart_items" class="header_cart_items ">0</span>
 

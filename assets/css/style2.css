@@ -464,7 +464,8 @@
     #product_quick_view {
         width: 765px
     }
-/* 
+
+    /* 
     .main_content {
         padding-bottom: 30px
     } */
@@ -531,7 +532,8 @@
         display: block
     }
 
-    .product_listing__main .product_item_wrap .product_item .bade_wrap {
+    .bade_wrap {
+        position: absolute;
         top: 5px;
         left: 10px
     }
