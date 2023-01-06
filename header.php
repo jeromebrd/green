@@ -1,3 +1,4 @@
+<?php require('./function.php'); ?>
 <!doctype html>
 <html lang="fr">
 
@@ -109,6 +110,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style2.css">
     <link rel="stylesheet" href="./assets/css/style3.css">
+    
     <meta name="description" content="Achat CBD en ligne | Livraison gratuite à partir de 29 euro | Cannabis légal - Green Power Shop">
 
     <script>
@@ -130,6 +132,7 @@
 
     <link rel="stylesheet" href="./owl/owl.carousel.min.css">
     <link rel="stylesheet" href="./owl/owl.theme.default.min.css">
+    
 
 </head>
 

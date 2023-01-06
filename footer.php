@@ -311,6 +311,7 @@
         }
     </style>
     <script src="./assets/js/anim_register.js"></script>
+    <script src="./assets/js/product.js"></script>
     <script>
         let interval = "100000",
             timeout = "3000";
@@ -359,7 +360,6 @@
             })
         })
     </script>
-
 
 </div>
 

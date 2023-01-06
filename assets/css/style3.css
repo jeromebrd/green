@@ -3,15 +3,17 @@
 .product_desc {
   display: grid !important;
   gap: 5px;
-  margin: 0 !important;
+  margin: auto;
   padding: 1rem 0 !important;
   grid-template-columns: repeat(4, 1fr);
   grid-template-rows: auto;
   justify-content: space-around;
-  width: 100%;
+  width: 80%;
+  min-height: 64px;
 }
 
-.product_desc p {
+.product_desc p,
+.product_desc a {
   cursor: pointer;
   width: 100% !important;
   border: 1px solid #e6e6e6;
@@ -20,7 +22,14 @@
   border-radius: 5px;
   background-color: #f8f8f8;
   text-align: center;
+  font-size: 0.9rem;
+
   /* color: black; */
+}
+
+.product_desc .link-product-unit.active {
+  border: 1px solid #31862f;
+  color: #31862f;
 }
 
 .product_desc p:hover {
@@ -70,14 +79,30 @@
   color: #dd1a54;
 }
 
-#shopify-section-1586785000503 .product_desc {
-  width: 80%;
-}
-
-#shopify-section-1586785000503 .product_desc p {
-  font-size: 0.9rem;
-}
-
 .owl-stage {
   padding-bottom: 3rem;
+}
+
+/* WISHLIST */
+
+.wishlist {
+  min-height: 100vh;
+}
+
+.wishlist h1 {
+  font-size: 44px;
+  font-weight: 500;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.wishlist h1:before {
+  content: '';
+  display: block;
+  position: absolute;
+  bottom: -17px;
+  width: 60px;
+  height: 3px;
+  background: #31862f;
+  transition: 0.5s;
 }
