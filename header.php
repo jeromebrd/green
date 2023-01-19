@@ -110,6 +110,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
     <link rel="stylesheet" href="./assets/css/style2.css">
     <link rel="stylesheet" href="./assets/css/style3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     
     <meta name="description" content="Achat CBD en ligne | Livraison gratuite à partir de 29 euro | Cannabis légal - Green Power Shop">
 
@@ -219,7 +220,7 @@
                                         </li>
 
                                         <li class="level_1__item level_2__small" style="display: inline-block;">
-                                            <a class="level_1__link " href="./produits.php">Nos produits
+                                            <a class="level_1__link " href="./produits">Nos produits
                                                 <i class="level_1__trigger megamenu_trigger" data-submenu="menu_1568649904694"></i>
 
                                             </a>
@@ -415,7 +416,7 @@
 
 
                                 <div class="header_cart" id="main__cart_item">
-                                    <a class="cart_link" href="#">
+                                    <a class="cart_link" href="./cart">
 
                                         <span class="link_text">Panier</span>
 
