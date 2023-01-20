@@ -5,7 +5,6 @@ $getCarts = getCarts();
 $priceTotalCart = getTotalPrice();
 $priceTotalFormat = number_format($priceTotalCart, 2, ',', ' ');
 
-$deleteMessage = "Article supprimé du panier";
 
 
 
@@ -18,6 +17,11 @@ $deleteMessage = "Article supprimé du panier";
      <div id="delete-message-container" class="d-none"></div>
         <div class="shopping-payment">
           <div class="resume-product">
+            <?php 
+            if(empty($getCarts)) {
+              echo "<div><p>Votre panier est vide</p></div>";
+            } 
+            ?>
             <?php
               foreach ($getCarts as $productCart) : 
                 $id_rowCart = $productCart['id'];
@@ -28,9 +32,6 @@ $deleteMessage = "Article supprimé du panier";
                 $product_id = $productCart['id_products']; 
                 $price_format = number_format($product_price, 2, ',', ' ');
             ?>    
-              <?php if (empty($id_rowCart)) {
-                echo "<div><p>Votre panier est vide</p</div>" ;
-              } else { ?>
                 <div class="grid-shopping-cart">
                   <img class="lazyload" src="//cdn.shopify.com/s/files/1/0425/0818/9859/products/afghan_kush_1_100x150_crop_center.jpg?v=1594034076" data-src="//cdn.shopify.com/s/files/1/0425/0818/9859/products/afghan_kush_1_280x280_crop_center.jpg?v=1594034076" alt="Afghan Kush">
                   <div class="resume-product-text">
@@ -59,7 +60,6 @@ $deleteMessage = "Article supprimé du panier";
                     <i class="fa fa-trash"></i>
                   </a>
                 </div>
-             <?php } ?>
             <?php endforeach; ?>
           </div>
           <div class="container-payment">

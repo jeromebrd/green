@@ -83,6 +83,8 @@ if (location.search.includes('dlt=ok')) {
       container.classList.add('hide');
       setTimeout(() => {
         container.classList.add('d-none');
+        container.style.display = 'none';
+
         // container.remove();
       }, 500);
     }, 5000);
