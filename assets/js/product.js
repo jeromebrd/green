@@ -67,6 +67,28 @@ wishListBtnsElement.forEach((wishListBtn) => {
   });
 });
 
+// affiche un message de validation de suppression d'article
+if (location.search.includes('dlt=ok')) {
+  const container = document.getElementById('delete-message-container');
+  container.innerHTML = 'Article supprimé du panier';
+  container.style.display = 'block';
+  container.classList.add('fade-in');
+  // fais apparaître le message au bout de 0.5s
+  setTimeout(function () {
+    container.classList.remove('d-none');
+    container.classList.remove('fade-in');
+    container.classList.add('fade-out');
+    // supprime le message au bout de 5s
+    setTimeout(() => {
+      container.classList.add('hide');
+      setTimeout(() => {
+        container.classList.add('d-none');
+        // container.remove();
+      }, 500);
+    }, 5000);
+  }, 1000);
+}
+
 // animation pour supprimer sans recharger la page cart
 
 /* $(document).ready(function () {

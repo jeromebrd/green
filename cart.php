@@ -2,12 +2,20 @@
 require_once('header.php');
 require_once('function.php');
 $getCarts = getCarts();
+$priceTotalCart = getTotalPrice();
+$priceTotalFormat = number_format($priceTotalCart, 2, ',', ' ');
+
+$deleteMessage = "Article supprimé du panier";
+
+
+
 ?>
 
 <div class="container_cart">
   <h1>Votre panier</h1>
-   <!-- container product + container payment -->
-   <div class="container-shopping-cart">
+  <!-- container product + container payment -->
+  <div class="container-shopping-cart">
+     <div id="delete-message-container" class="d-none"></div>
         <div class="shopping-payment">
           <div class="resume-product">
             <?php
@@ -20,7 +28,9 @@ $getCarts = getCarts();
                 $product_id = $productCart['id_products']; 
                 $price_format = number_format($product_price, 2, ',', ' ');
             ?>    
-              
+              <?php if (empty($id_rowCart)) {
+                echo "<div><p>Votre panier est vide</p</div>" ;
+              } else { ?>
                 <div class="grid-shopping-cart">
                   <img class="lazyload" src="//cdn.shopify.com/s/files/1/0425/0818/9859/products/afghan_kush_1_100x150_crop_center.jpg?v=1594034076" data-src="//cdn.shopify.com/s/files/1/0425/0818/9859/products/afghan_kush_1_280x280_crop_center.jpg?v=1594034076" alt="Afghan Kush">
                   <div class="resume-product-text">
@@ -45,11 +55,11 @@ $getCarts = getCarts();
                     <!-- a changer en fonction de la quantité -->
                     <p class="bold"><?= $price_format ?>€</p>
                   </div>
-                  <a href="#" class="btn-delete" data-id="<?= $id_rowCart; ?>">
+                  <a href="./delete-item_cart?i=<?= $id_rowCart ?>" class="btn-delete" data-id="<?= $id_rowCart; ?>">
                     <i class="fa fa-trash"></i>
                   </a>
                 </div>
-                
+             <?php } ?>
             <?php endforeach; ?>
           </div>
           <div class="container-payment">
@@ -58,16 +68,15 @@ $getCarts = getCarts();
             <i class="fa-solid fa-credit-card"></i>
 
           </div>
-          <?php $priceTotalCart = getTotalPrice()?>
           <div class="underline"></div>
           <div class="payment-total">
             <div class="payment-total-text">
-              <p class="flex-x space-btw">Total :<span class="price total-without-discount"><?= $priceTotalCart ; ?></span></p>
+              <p class="flex-x space-btw">Total :<span class="price total-without-discount"><?= $priceTotalFormat  ?>€</span></p>
               <p class="flex-x space-btw">Livraison :<span class="price delivery">--€</span></p>
               <p class="flex-x space-btw">Remise :<span class="price discount">--€</span></p>
               <div class="underline"></div>
               <div class="totat-net">
-                <p class="flex-x space-btw bold">Total net à payer :<span class="price total-net-payment">160€</span></p>
+                <p class="flex-x space-btw bold">Total net à payer :<span class="price total-net-payment"><?= $priceTotalFormat  ?>€</span></p>
               </div>
               <form action="#" class="promo">
                 <div class="flex-x space-btw">

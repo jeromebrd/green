@@ -1,4 +1,4 @@
-<!-- <?php
+<?php
 require_once('co_bdd.php');
 header('Content-Type: application/json');
 
@@ -21,4 +21,4 @@ echo json_encode(array(
     'delivery' => $delivery,
     'discount' => $discount,
     'netTotal' => $netTotal,
-)); -->
+));

@@ -154,21 +154,24 @@ function getCarts() {
     $req = $bdd->prepare('DELETE FROM cart WHERE id = :item_id');
     $req->bindValue(':item_id', $item_id);
     $req->execute();
-    (header('location: ./cart'));
+    (header('location: ./cart?dlt=ok'));
   } catch (\Throwable $th) {
     echo "erreur : " . $e;
   }
-
-  echo "article supprimé";
  }
 
 //  obtenir le panier total 
 function getTotalPrice() {
   global $bdd;
   // execute the SELECT SUM query
-  $stmt = $bdd->query("SELECT SUM(price) FROM cart");
+  $stmt = $bdd->query("SELECT SUM(price) as total FROM cart");
   // fetch the result
   $result = $stmt->fetch();
   // return the result
-  return $result[0];
+  if(!empty($result)){
+    return $result['total'];
+  }
+  else{
+    return 0;
+  };
 }
