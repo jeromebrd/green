@@ -1,4 +1,7 @@
-<?php require('./function.php'); ?>
+<?php 
+require('./function.php');
+$totalProductsCart = getNbProductsCart();
+?>
 <!doctype html>
 <html lang="fr">
 
@@ -393,10 +396,10 @@
                                 <div class="header_account">
 
 
-                                    <a href="connexion.php" title="Account">
+                                    <!-- <a href="connexion.php" title="Account">
                                         <span class="link_text">Connexion</span>
 
-                                    </a>
+                                    </a> -->
                                     <!-- Code php pour afficher mon compte lorsqu'on est connecter -->
                                     <a href="account.php" title="Account">
                                         <span class="link_text">Mon compte</span>
@@ -420,7 +423,7 @@
 
                                         <span class="link_text">Panier</span>
 
-                                        <span id="cart_items" class="header_cart_items ">0</span>
+                                        <span id="cart_items" class="header_cart_items "><?= $totalProductsCart ?></span>
 
                                     </a>
 

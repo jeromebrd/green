@@ -164,9 +164,9 @@ function getCarts() {
 function getTotalPrice() {
   global $bdd;
   // execute the SELECT SUM query
-  $stmt = $bdd->query("SELECT SUM(price) as total FROM cart");
+  $req = $bdd->query("SELECT SUM(price) as total FROM cart");
   // fetch the result
-  $result = $stmt->fetch();
+  $result = $req->fetch();
   // return the result
   if(!empty($result)){
     return $result['total'];
@@ -174,4 +174,17 @@ function getTotalPrice() {
   else{
     return 0;
   };
+}
+
+// obtenir le nombre d'articles présent dans le panier
+
+function getNbProductsCart() {
+  global $bdd ;
+  $req = $bdd -> query('SELECT COUNT(id) as total_id_cart FROM cart');
+  $result = $req->fetch();
+  if(!empty($result)) {
+    return $result['total_id_cart'];
+  } else {
+    return 0;
+  }
 }

@@ -70,8 +70,33 @@ wishListBtnsElement.forEach((wishListBtn) => {
 // affiche un message de validation de suppression d'article
 if (location.search.includes('dlt=ok')) {
   const container = document.getElementById('delete-message-container');
-  container.innerHTML = 'Article supprimé du panier';
-  container.style.display = 'block';
+  // container.innerHTML = '- Article supprimé du panier';
+  container.innerHTML = `<i class="fa-solid fa-minus"></i><p>Article supprimé du panier</p>`;
+  container.style.display = 'flex';
+  container.classList.add('fade-in');
+  // fais apparaître le message au bout de 0.5s
+  setTimeout(function () {
+    container.classList.remove('d-none');
+    container.classList.remove('fade-in');
+    container.classList.add('fade-out');
+    // supprime le message au bout de 5s
+    setTimeout(() => {
+      container.classList.add('hide');
+      setTimeout(() => {
+        container.classList.add('d-none');
+        container.style.display = 'none';
+
+        // container.remove();
+      }, 500);
+    }, 5000);
+  }, 1000);
+}
+
+// affiche un message de validation d'ajout d'article
+if (location.search.includes('success=add')) {
+  const container = document.getElementById('validation-message-container');
+  container.innerHTML = `<i class="fa-solid fa-plus"></i><p>Article ajouté au panier</p>`;
+  container.style.display = 'flex';
   container.classList.add('fade-in');
   // fais apparaître le message au bout de 0.5s
   setTimeout(function () {

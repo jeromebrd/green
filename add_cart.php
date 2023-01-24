@@ -1,7 +1,7 @@
 <?php
 require ('./co_bdd.php');
 require('./function.php');
-
+$tva = $_POST['tax'];
 // verification si l'id du prix est envoyé dans la requête post
 // s'il existe il est envoyé en argument a la fonction
 if(isset($_POST['price_id'])) {
@@ -12,7 +12,6 @@ $products_id = $_POST['product_id'];
 $postProducts = postProduct($products_id, $prices_id);
 
 foreach ($postProducts as $product) {
-	
 	$product_id = $product['product_id'];
 	$product_name = $product['product_name'];
 	$product_img = $product['product_img'];
@@ -32,6 +31,9 @@ if(!isset($quantity)) {
 
 
 if(count($postProducts)>0){
+	// ajout de la TVA au prix
+	$price *= $tva;
+	// insertion dans la table cart
   insertToCart($product_name, $price, $unit, $quantity , $product_id);
 }
 

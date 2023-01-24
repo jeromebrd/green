@@ -11,4 +11,3 @@ $item_id = $_GET['i'];
 // Appel de la fonction pour supprimer un produit
 deleteProductCart($item_id);
 
-echo "suppression ok";

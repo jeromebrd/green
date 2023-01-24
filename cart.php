@@ -6,20 +6,29 @@ $priceTotalCart = getTotalPrice();
 $priceTotalFormat = number_format($priceTotalCart, 2, ',', ' ');
 
 
+// if (isset($_POST['promo-code'])) {
+//     $promo_code = htmlspecialchars($_POST['promo-code']);
+//     // utilisation de la variable $promo_code pour une requête SQL ou une autre utilisation
+//     echo '<p>' . $promo_code . '</p>';
+// }
+// <script>alert('je suis une faille de sécurité')</script>
+
 
 
 ?>
 
 <div class="container_cart">
+  <div class="container-message">
+    <div id="delete-message-container" class="d-none"></div>
+  </div>
   <h1>Votre panier</h1>
   <!-- container product + container payment -->
   <div class="container-shopping-cart">
-     <div id="delete-message-container" class="d-none"></div>
         <div class="shopping-payment">
           <div class="resume-product">
             <?php 
             if(empty($getCarts)) {
-              echo "<div><p>Votre panier est vide</p></div>";
+              echo "<div><p>Votre panier est vide.</p></div>";
             } 
             ?>
             <?php
@@ -37,7 +46,7 @@ $priceTotalFormat = number_format($priceTotalCart, 2, ',', ' ');
                   <div class="resume-product-text">
                     <h3 class="title-product " id="title-xs"><?= $product_name ?></h3>
                     <p class="product-unit"><?= $product_unit?></p>
-                    <p><?= $product_price ?>€</p> 
+                    <p><?= $price_format ?>€</p> 
                     <!-- prix sans tva ..... -->
                   </div>
                   <div class="quantity">
@@ -78,13 +87,15 @@ $priceTotalFormat = number_format($priceTotalCart, 2, ',', ' ');
               <div class="totat-net">
                 <p class="flex-x space-btw bold">Total net à payer :<span class="price total-net-payment"><?= $priceTotalFormat  ?>€</span></p>
               </div>
-              <form action="#" class="promo">
-                <div class="flex-x space-btw">
-                  
+              <div class="promo">
+                <div class="promo-delivery-container">
                   <p>Code promo : </p>
-                  <div class="flex-x">
-                    <input type="text" name="promo-code" id="promo-code" size="10" >
-                  </div>
+                  <form action="#" method="POST" class="form-promo">
+                    <div class="inputs-promo">
+                      <input type="text" name="promo-code" id="promo-code" size="10" >
+                      <input type="submit" value="Ok" class="btn-validation-code"> 
+                    </div>
+                  </form>
                 </div>
                 <label for="choice-delivery">Méthode de livraison :</label>
                 <select name="choice-delivery" id="choice-delivery">
@@ -92,7 +103,7 @@ $priceTotalFormat = number_format($priceTotalCart, 2, ',', ' ');
                   <option value="choice-2">Livraison Express <span>(+10€)</span></option>
                   <option value="choice-3">Point Relais <span>(Gratuit)</span></option>
                 </select>
-              </form>
+              </div>
               <button class="btn btn-payment">
                 Valider ma commande
               </button>

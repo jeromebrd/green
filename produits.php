@@ -12,23 +12,14 @@ if(isset($_GET['sort_by'])) {
 $priceProducts = getPricesProducts();
 $categories = getCategories();
 
-
-
-// echo '<pre> PRODUCT';
-// // var_dump($products);
-// echo '<br>  Price';
-// var_dump($products);
-
-// echo '<br> SESSION';
-// echo '<br> GET';
-// print_r($_GET);
-
-// echo '</pre>';
 ?>
 
 <div class="page_container">
     <div class="breadcrumbs">
         <div class="container">
+            <div class="container-message">
+                <div id="validation-message-container" class="d-none"></div>
+            </div>
             <ul>
                 <li><a href="./index.php">Home</a></li>
                 <li><span>Nos produits</span></li>
@@ -184,6 +175,7 @@ $categories = getCategories();
                                                 echo "<input type='radio' class='product-unit' id='{$price_id}' data-price='{$price}' data-tax='{$tax}' value='{$price_id}' name='price_id' />";
                                                 echo "<label for='{$price_id}' >{$unit}</label>";
                                                 echo '<input type="hidden" name="product_id" value="' . $id .'">';
+                                                echo '<input type="hidden" name="tax" value="' . $tax .'">';
                                                 echo "</div>";
                                 
                                             } 
